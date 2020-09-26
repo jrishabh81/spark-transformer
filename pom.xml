@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.lwwale</groupId>
+    <artifactId>spark-transformer</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Mathematical Transformer</name>
+    <description>Mathematical Expression based transformer on spark dataframes</description>
+    <inceptionYear>2019</inceptionYear>
+    <developers>
+        <developer>
+            <name>Rishabh Jain</name>
+            <email>jrishabh81@gmail.com</email>
+        </developer>
+    </developers>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>${source}</source>
+                    <target>${target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <scalaVersion>2.11</scalaVersion>
+        <sparkVersion>2.3.1</sparkVersion>
+        <source>1.8</source>
+        <target>1.8</target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scalaVersion}</artifactId>
+            <version>${sparkVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scalaVersion}</artifactId>
+            <version>${sparkVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.holdenkarau/spark-testing-base -->
+        <dependency>
+            <groupId>com.holdenkarau</groupId>
+            <artifactId>spark-testing-base_${scalaVersion}</artifactId>
+            <version>${sparkVersion}_0.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-hive -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_${scalaVersion}</artifactId>
+            <version>${sparkVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.databricks/spark-csv -->
+        <dependency>
+            <groupId>com.databricks</groupId>
+            <artifactId>spark-csv_${scalaVersion}</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+    </dependencies>
+</project>
