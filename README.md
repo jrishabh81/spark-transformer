@@ -42,7 +42,7 @@ result.show();
 
 1. Add the library to your Maven project (see `pom.xml` for dependencies).
 2. Use the provided operands, operators, and evaluators to build and execute your KPI logic.
-3. See `SampleSparkTest.java` for more usage examples.
+3. See [`SampleSparkTest.java`](https://github.com/jrishabh81/spark-transformer/blob/master/src/test/java/com/lwwale/spark/transformer/SampleSparkTest.java) for more usage examples.
 
 ---
 
